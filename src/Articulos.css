@@ -1,9 +1,9 @@
-.ImagenPlatillo{
+.ImagenArticulo{
 	height: 80px;
 	width: 80px;
 	float: left;
 }
-.Platillo-Menu{
+.Articulo-Menu{
 	max-height: 500px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -13,17 +13,17 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 }
-.TitlePlatillo{
+.TitleArticulo{
 	margin-top: 0;
 	text-align: left;
 }
-.DescripcionPlatillo{
+.DescripcionArticulo{
 	text-align: justify;
 }
-.PrecioPlatillo{
+.PrecioArticulo{
 	margin-left: 60px;
 }
-.EspacioPlatillo{
+.EspacioArticulo{
 	float: right;
 	margin-left: 10px;
 }

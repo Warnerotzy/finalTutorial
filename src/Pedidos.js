@@ -4,25 +4,27 @@ import { observer } from 'mobx-react';
 
 class Pedidos extends Component {
     render() {
-        let PlatillosPedidos = [];
+        
+        let ArticulosPedidos = [];
         let BebidasPedidos = [];
-        const llenar_PlatillosPedidos =
-            VarTiendaController.platillos.forEach(
+        
+        const llenar_ArticulosPedidos =
+            VarTiendaController.Articulos.forEach(
                 (value, index) => {
-                    if(value.cantidad !== 0){
-                        PlatillosPedidos.push(
+                    if(value.cantidad != 0){
+                        ArticulosPedidos.push(
                             <div className="list-group-item" key={index}>
                                 <div className="panel-body">
                                     <h4>{value.nombre}</h4><br />
                                     <div className="APrecioCantidad">
                                         <span>Cantidad: {value.cantidad}</span>
-                                        <span className="PrecioPlatillo">
+                                        <span className="PrecioArticulo">
                                             Precio: {value.cantidad * value.precio}
                                         </span>
                                     </div>
                                 </div>
                             </div>
-                        );
+                        )
                     }
                 }
             );
@@ -30,14 +32,14 @@ class Pedidos extends Component {
         const llenar_BebidasPedidos =
             VarTiendaController.bebidas.forEach(
                 (value, index) => {
-                    if(value.cantidad !== 0){
+                    if(value.cantidad != 0){
                         BebidasPedidos.push(
                             <div className="list-group-item" key={index}>
                                 <div className="panel-body">
                                     <h4>{value.nombre}</h4><br />
                                     <div className="APrecioCantidad">
                                         <span>Cantidad: {value.cantidad}</span>
-                                        <span className="PrecioPlatillo">
+                                        <span className="PrecioArticulo">
                                             Precio: {value.cantidad * value.precio}
                                         </span>
                                     </div>
@@ -53,8 +55,8 @@ class Pedidos extends Component {
                 <div>
                     <div className="panel panel-primary">
                         <div className="list-group Pedidos-Menu">
-                            {PlatillosPedidos}
-                            
+                            {/*ArticulosPedidos*/}
+                            {BebidasPedidos}
                         </div>
                     </div>
                 </div>
