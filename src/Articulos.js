@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import VarTiendaController from './tiendaController';
 import Ordenar from './Ordenar';
 import logo from "./logo.svg";
-import './Platillos.css';
+import './Articulos.css';
 
-class Platillos extends Component {
+class Articulos extends Component {
     render(){
 
-        let platillos_div = [];
+        let Articulos_div = [];
 
-        const llenar_array_platillos_div =
-            VarTiendaController.platillos.forEach(
+        const llenar_array_Articulos_div =
+            VarTiendaController.Articulos.forEach(
                 (value,index) => (
-                    platillos_div.push(
+                    Articulos_div.push(
                         <div className="list-group-item" key={index}>
                             <div className="panel-body">
-                                <img role="presentation" src={logo} className="ImagenPlatillo"/>
-                                <h2 className="TitlePlatillo">{value.nombre}</h2>
-                                <div className="DescripcionPLatillo">{value.descripcion}</div>
+                                <img role="presentation" src={logo} className="ImagenArticulo"/>
+                                <h2 className="TitleArticulo">{value.nombre}</h2>
+                                <div className="DescripcionArticulo">{value.descripcion}</div>
                                 <Ordenar precio={value.precio} indice={index} 
                                     hacerPedido={(indice, evento)=>{
                                         VarTiendaController.ponerEnLaOrden(indice, evento)
@@ -33,8 +33,8 @@ class Platillos extends Component {
             <div className="container col-md-6">
                 <div>
                     <div className="panel panel-primary">
-                        <div className="list-group Platillo-Menu">
-                            {platillos_div}
+                        <div className="list-group Articulo-Menu">
+                            {Articulos_div}
                         </div>
                     </div>
                 </div>
@@ -43,4 +43,4 @@ class Platillos extends Component {
     }
 }
 
-export default Platillos;
+export default Articulos;

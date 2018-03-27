@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Platillos from './Platillos';
+import Articulos from './Articulos';
 import Pedidos from './Pedidos';
 import Bebidas from './Bebidas';
 
@@ -12,7 +12,7 @@ class Lienzo extends Component {
                 </div>
                 
                 <div className="row">
-                <Platillos />
+                <Bebidas />
                 <Pedidos />
                 </div>
             </div>

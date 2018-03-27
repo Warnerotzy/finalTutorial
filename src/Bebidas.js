@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Platillos.css';
+import './Articulos.css';
 import logo from './logo.svg';
 import VarTiendaController from './tiendaController';
 import Ordenar from './Ordenar';
@@ -13,9 +13,9 @@ class Bebidas extends Component{
 				bebidas_div.push(
 					<div className="list-group-item" key={index}>
 						<div className="panel-body">
-							<img role="presentation" src={logo} className="ImagenPlatillo"/>
-							<h2 className="TitlePlatillo"> {value.nombre} </h2>
-							<div className="DescripcionPlatillo"> {value.descripcion} </div>
+							<img role="presentation" src={logo} className="ImagenArticulo"/>
+							<h2 className="TitleArticulo"> {value.nombre} </h2>
+							<div className="DescripcionArticulo"> {value.descripcion} </div>
 							<Ordenar precio={value.precio} indice={index}
 							hacerPedido={(indice_d, evento_d)=>
 							{VarTiendaController.bebidasEnLaOrden(indice_d, evento_d)}}/>
@@ -30,7 +30,7 @@ class Bebidas extends Component{
 			<div className="container col-md-6">
 			<div>
 				<div className="panel panel-primary">
-					<div className="list-group Platillo-Menu">
+					<div className="list-group Articulo-Menu">
 					{bebidas_div}
 					</div>
 				</div>

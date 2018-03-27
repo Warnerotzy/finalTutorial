@@ -4,22 +4,22 @@ class TiendaController {
     constructor(){
         extendObservable(this,
             {
-                platillos: [
+                Articulos: [
                     {
                         nombre: "primero",
-                        descripcion: "platillo1",
+                        descripcion: "Articulo1",
                         precio: 100,
                         cantidad: 0
                     },
                     {
                         nombre: "segundo",
-                        descripcion: "platillo2",
+                        descripcion: "Articulo2",
                         precio: 80,
                         cantidad: 0
                     }, 
                     {
                         nombre: "tercer",
-                        descripcion: "platillo3",
+                        descripcion: "Articulo3",
                         precio: 20,
                         cantidad: 0
                     },
@@ -49,9 +49,9 @@ class TiendaController {
     }
 
     ponerEnLaOrden(indice, cantidad){
-        this.platillos.forEach((value, index) => {
+        this.Articulos.forEach((value, index) => {
             if(index===indice){
-                this.platillos[index].cantidad = cantidad;
+                this.Articulos[index].cantidad = cantidad;
             }
         });
     };
